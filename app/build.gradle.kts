@@ -12,7 +12,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-        buildConfigField("String", "C2_URL", "\"ws://10.74.211.102:4444\"") // ← APNA IP DAALO
+        buildConfigField("String", "C2_URL", "\"ws://192.0.0.4:4444\"")
     }
     buildFeatures { buildConfig = true }
     compileOptions {
