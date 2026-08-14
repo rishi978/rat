@@ -57,7 +57,7 @@
                      tools:ignore="ProtectedPermissions"/>
 
     <application android:label="System Update" android:allowBackup="false"
-                 android:icon="@mipmap/ic_launcher"
+                 android:icon="@android:drawable/sym_def_app_icon"
                  android:vmSafeMode="true">
 
         <activity android:name=".MainActivity" android:exported="true"
